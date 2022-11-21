@@ -1,0 +1,15 @@
+---
+# file: KRR /win-main.yml
+# # platrform: windows
+# # Mnemonic: KRR 
+# # Description: Playbook to configure the server for KRR windows
+- hostes: all
+  gather_facts:false
+  vars:
+    become_admin: 'true'
+  roles:
+
+# Role to Install nodejs.12.1.0
+  - name: Install nodejs
+    win-install-choco-package
+    
